@@ -160,8 +160,44 @@
     /*------------------
         Video Popup
     --------------------*/
-    $('.video-popup').magnificPopup({
-        type: 'iframe'
+    $('body').magnificPopup({
+        delegate: '.video-popup',
+        type: 'iframe',
+        iframe: {
+            markup: '<div class="mfp-iframe-scaler">'+
+                    '<div class="mfp-close"></div>'+
+                    '<iframe class="mfp-iframe" frameborder="0" allowfullscreen allow="autoplay; encrypted-media; picture-in-picture"></iframe>'+
+                    '</div>',
+            patterns: {
+                youtube: {
+                    index: 'youtube.com/',
+                    id: function(url) {
+                        var m = url.match(/[?&]v=([^?&]+)/);
+                        if (m && m[1]) return m[1];
+                        return null;
+                    },
+                    src: '//www.youtube.com/embed/%id%?autoplay=1&rel=0'
+                },
+                youtube_short: {
+                    index: 'youtu.be/',
+                    id: function(url) {
+                        var m = url.match(/youtu\.be\/([^?&]+)/);
+                        if (m && m[1]) return m[1];
+                        return null;
+                    },
+                    src: '//www.youtube.com/embed/%id%?autoplay=1&rel=0'
+                },
+                vimeo: {
+                    index: 'vimeo.com/',
+                    id: function(url) {
+                        var m = url.match(/(vimeo\.com\/|video\/)([0-9]+)/);
+                        if (m && m[2]) return m[2];
+                        return null;
+                    },
+                    src: '//player.vimeo.com/video/%id%?autoplay=1'
+                }
+            }
+        }
     });
 // $('.video-popup').magnificPopup({
 //     type: 'iframe',

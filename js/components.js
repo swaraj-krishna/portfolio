@@ -68,6 +68,14 @@ $(document).ready(function() {
             <section class="portfolio spad pt-0">
                 <div class="container">
                     <div class="row portfolio__gallery no-gutters">
+                        <div class="col-lg-4 col-md-6 col-sm-6 mix digital-marketing">
+                            <div class="portfolio__item">
+                                <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/phonepay.png">
+                                    <a href="https://m.youtube.com/watch?v=kfiAp_Hq1eM" class="play-btn video-popup"><i
+                                            class="fa fa-play"></i></a>
+                                </div> 
+                            </div>
+                        </div>
                         <div class="col-lg-4 col-md-6 col-sm-6 mix branding">
                             <div class="portfolio__item">
                                 <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/kappiri.png">
@@ -86,10 +94,18 @@ $(document).ready(function() {
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6 mix digital-marketing">
                             <div class="portfolio__item">
-                                <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/phonepay.png">
-                                    <a href="https://m.youtube.com/watch?v=kfiAp_Hq1eM" class="play-btn video-popup"><i
-                                            class="fa fa-play"></i></a>
-                                </div> 
+                                <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/gopro.png">
+                                    <a href="https://youtu.be/TmDsi-9pgz8?si=EwDJHVq_ICLJlFHM" class="play-btn video-popup"><i
+                                        class="fa fa-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 mix digital-marketing">
+                            <div class="portfolio__item">
+                                <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/gemini.png">
+                                    <a href="https://youtu.be/UJscUDJCq1s?si=STrGlUlrOn9CnulO" class="play-btn video-popup"><i
+                                        class="fa fa-play"></i></a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6 mix digital-marketing">
@@ -120,11 +136,6 @@ $(document).ready(function() {
             $(this).css('background-image', 'url(' + bg + ')');
         });
 
-        // Re-initialize video-popup for dynamic content
-        if($.fn.magnificPopup) {
-            $('.video-popup').magnificPopup({
-                type: 'iframe'
-            });
-        }
+
     }
 });
