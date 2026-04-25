@@ -78,7 +78,8 @@ $(document).ready(function () {
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6 mix branding">
                             <div class="portfolio__item">
-                                <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/kappiri.webp">
+                                <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/kappiri.png
+                                ">
                                     <a href="https://youtu.be/FXr-2BpS4Po?si=4ENMvQX2Tk3CHRfu" class="play-btn video-popup"><i
                                             class="fa fa-play"></i></a>
                                 </div>
