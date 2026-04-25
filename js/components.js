@@ -10,43 +10,43 @@ $(document).ready(function() {
                         </div>
                         <p>Get a custom-crafted video built for your brand — professionally filmed, beautifully edited,
                             and delivered with precision.</p>
-                        <a href="./portfolio.html" class="primary-btn">VIEW MORE</a>
+                        <a href="./portfolio.html" class="primary-btn">VIEW MY WORKS</a>
                     </div>
                 </div>
                 <div class="col-lg-8">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="services__item">
-                                <a href="./portfolio.html?filter=digital-marketing">
+                                <a href="./portfolio.html?filter=vfxartist">
                                     <div class="services__item__icon">
                                         <img src="img/icons/si-4.png" alt="">
                                     </div>
                                 </a>
-                                <a href="./portfolio.html?filter=digital-marketing"><h4>VFX Artist</h4></a>
+                                <a href="./portfolio.html?filter=vfxartist"><h4>VFX Artist</h4></a>
                                 <p>I blend creativity with technology to create stunning visual effects that elevate
                                     storytelling and leave a lasting impression.</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                            <a href="./portfolio.html?filter=web">
+                            <a href="./portfolio.html?filter=cinematographer">
                                 <div class="services__item">
                                     <div class="services__item__icon">
                                         <img src="img/icons/si-3.png" alt="">
                                     </div>
                             </a>
-                            <a href="./portfolio.html?filter=web"><h4>Cinematographer</h4></a>
+                            <a href="./portfolio.html?filter=cinematographer"><h4>Cinematographer</h4></a>
                             <p>With a keen eye for light, composition, and movement, I capture visually striking footage
                                 that tells your story with power and emotion.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
-                        <a href="./portfolio.html?filter=branding">
+                        <a href="./portfolio.html?filter=editor">
                             <div class="services__item">
                                 <div class="services__item__icon">
                                     <img src="img/icons/si-2.png" alt="">
                                 </div>
                         </a>
-                        <a href="./portfolio.html?filter=branding"><h4>Editor</h4></a>
+                        <a href="./portfolio.html?filter=editor"><h4>Editor</h4></a>
                         <p>I transform raw footage into cohesive narratives, ensuring every cut, sound, and transition
                             enhances the message and experience.</p>
                     </div>
@@ -65,53 +65,55 @@ $(document).ready(function() {
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                    <div class="team__item set-bg" data-setbg="img/portfolio/paperboat.png">
-                        <a href="https://www.youtube.com/watch?v=6OuHFmkiizk" class="play-btn video-popup"><i
-                                class="fa fa-play"></i></a>
-                        <div class="team__item__text">
-                            <h4>Paper Boat AD</h4>
-                            <p>VFX</p>
+            <section class="portfolio spad pt-0">
+                <div class="container">
+                    <div class="row portfolio__gallery">
+                        <div class="col-lg-4 col-md-6 col-sm-6 mix branding">
+                            <div class="portfolio__item">
+                                <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/kappiri.png">
+                                    <a href="https://youtu.be/FXr-2BpS4Po?si=4ENMvQX2Tk3CHRfu" class="play-btn video-popup"><i
+                                            class="fa fa-play"></i></a>
+                                </div>
+                                <div class="portfolio__item__text">
+                                    <h4>KAPPIRI - DOCUMENTARY</h4>
+                                    <ul>
+                                        <li>FILM </li>
+                                        <li>VFX</li>
+                                        <li>CINEMATOGRAPHY</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 mix digital-marketing">
+                            <div class="portfolio__item">
+                                <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/paperboat.png">
+                                    <a href="https://m.youtube.com/watch?v=5XdWwAL--mQ" class="play-btn video-popup"><i
+                                            class="fa fa-play"></i></a>
+                                </div>
+                                <div class="portfolio__item__text">
+                                    <h4>Paper Boat AD</h4>
+                                    <span>VFX</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 mix digital-marketing">
+                            <div class="portfolio__item">
+                                <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/phonepay.png">
+                                    <a href="https://m.youtube.com/watch?v=kfiAp_Hq1eM" class="play-btn video-popup"><i
+                                            class="fa fa-play"></i></a>
+                                </div>
+                                <div class="portfolio__item__text">
+                                    <h4>PhonePe</h4>
+                                    <ul>
+                                        <li>VFX</li>
+                                        <li>Cinematography</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                    <div class="team__item team__item--second set-bg" data-setbg="img/portfolio/phonepay.png">
-                        <a href="https://www.youtube.com/watch?v=eaeWc3Zj9Wo" class="play-btn video-popup"><i
-                                class="fa fa-play"></i></a>
-                        <div class="team__item__text">
-                            <h4>PhonePe</h4>
-                            <p>VFX & Cinematography</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                    <div class="team__item team__item--third set-bg" data-setbg="img/portfolio/kappiri.png">
-                        <a href="https://www.youtube.com/watch?v=pr4HWSyrkzY" class="play-btn video-popup"><i
-                                class="fa fa-play"></i></a>
-                        <div class="team__item__text">
-                            <h4>KAPPIRI - DOCUMENTARY</h4>
-                            <p>FILM, VFX & Cinematography</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                    <div class="team__item team__item--four set-bg"
-                        data-setbg="img/Cinematographer/Models/DSC08725.jpg">
-                        <a href="./portfolio.html?folder=models" class="play-btn"><i class="fa fa-play"></i></a>
-                        <div class="team__item__text">
-                            <h4>Models</h4>
-                            <p>FILM, VFX & CINEMATOGRAPHY</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12 p-0">
-                    <div class="team__btn">
-                        <a href="./portfolio.html" class="primary-btn">VIEW MORE</a>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
     `;
 
