@@ -103,108 +103,37 @@
                     </ul>
                 </div>
             </div>
-            <div class="row portfolio__gallery  no-gutters">
-                <div class="col-lg-4 col-md-6 col-sm-6 mix vfxartist">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/kappiri.png">
-                            <a href="https://youtu.be/FXr-2BpS4Po?si=4ENMvQX2Tk3CHRfu" class="play-btn video-popup"><i
-                                    class="fa fa-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mix vfxartist">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/foodadvfx.png">
-                            <a href="https://youtu.be/ECdSHubQGi8?si=CpiKRRDoNOVTuQmn" class="play-btn video-popup"><i
-                                    class="fa fa-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mix vfxartist">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/paperboat.png">
-                            <a href="https://m.youtube.com/watch?v=5XdWwAL--mQ" class="play-btn video-popup"><i
-                                    class="fa fa-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mix vfxartist">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/phonepay.png">
-                            <a href="https://m.youtube.com/watch?v=kfiAp_Hq1eM" class="play-btn video-popup"><i
-                                    class="fa fa-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mix vfxartist">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/gopro.png">
-                            <a href="https://youtu.be/TmDsi-9pgz8?si=EwDJHVq_ICLJlFHM" class="play-btn video-popup"><i
-                                    class="fa fa-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mix vfxartist">
-                    <div class="portfolio__item">
-                        <div class="portfolio__item__video set-bg" data-setbg="img/portfolio/gemini.png">
-                            <a href="https://youtu.be/UJscUDJCq1s?si=STrGlUlrOn9CnulO" class="play-btn video-popup"><i
-                                    class="fa fa-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- VFX Folders -->
-                <div class="col-lg-4 col-md-6 col-sm-6 mix vfxartist">
-                    <div class="portfolio__item portfolio-folder" data-folder="blender-3d">
-                        <div class="portfolio__item__video set-bg" data-setbg="">
-                            <div class="folder-icon"><i class="fa fa-folder-open"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mix vfxartist">
-                    <div class="portfolio__item portfolio-folder" data-folder="maya-3d">
-                        <div class="portfolio__item__video set-bg" data-setbg="">
-                            <div class="folder-icon"><i class="fa fa-folder-open"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Cinematographer Folders -->
-                <div class="col-lg-4 col-md-6 col-sm-6 mix cinematographer editor">
-                    <div class="portfolio__item portfolio-folder" data-folder="bike-photography">
-                        <div class="portfolio__item__video set-bg" data-setbg="">
-                            <div class="folder-icon"><i class="fa fa-folder-open"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mix cinematographer editor">
-                    <div class="portfolio__item portfolio-folder" data-folder="car-photography">
-                        <div class="portfolio__item__video set-bg" data-setbg="">
-                            <div class="folder-icon"><i class="fa fa-folder-open"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mix cinematographer editor">
-                    <div class="portfolio__item portfolio-folder" data-folder="festival-photography">
-                        <div class="portfolio__item__video set-bg" data-setbg="">
-                            <div class="folder-icon"><i class="fa fa-folder-open"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 mix cinematographer editor">
-                    <div class="portfolio__item portfolio-folder" data-folder="models">
-                        <div class="portfolio__item__video set-bg" data-setbg="">
-                            <div class="folder-icon"><i class="fa fa-folder-open"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- achivements Folder -->
-                <div class="col-lg-4 col-md-6 col-sm-6 mix achivements">
-                    <div class="portfolio__item portfolio-folder" data-folder="achivements">
-                        <div class="portfolio__item__video set-bg" data-setbg="">
-                            <div class="folder-icon"><i class="fa fa-folder-open"></i></div>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <style>
+            #portfolioGalleryRow {
+                display: flex;
+                flex-direction: column;
+                height: 840px; /* exactly 3 rows of 280px height */
+                overflow-x: auto;
+                overflow-y: hidden;
+                scrollbar-width: none; /* Firefox */
+                -ms-overflow-style: none;  /* IE and Edge */
+                margin: 0; padding: 0; gap: 0;
+            }
+            #portfolioGalleryRow::-webkit-scrollbar {
+                display: none; /* Chrome, Safari, Opera */
+            }
+            .scroll-row-horiz {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                height: 280px;
+                margin: 0; padding: 0; gap: 0;
+            }
+            #portfolioGalleryRow .mix {
+                margin: 0 !important;
+                padding: 0 !important;
+                border: none !important;
+            }
+        </style>
+        <div class="container-fluid" style="padding: 0; margin: 0;">
+            <div class="portfolio__gallery" id="portfolioGalleryRow">
+                <!-- Dynamically injected rows go here -->
             </div>
             <!-- <div class="col-lg-4 col-md-6 col-sm-6 mix branding">
                     <div class="portfolio__item">
@@ -389,114 +318,218 @@
     <script>
         $(document).ready(function () {
             const projectFolders = {
-                'blender-3d': {
-                    title: 'Blender 3D OUT images',
-                    images: [
-                        'img/VFX Artist/Blender 3D OUT images/NIVEA PHOTO 1.png',
-                        'img/VFX Artist/Blender 3D OUT images/London bridge 2.png',
-                        'img/VFX Artist/Blender 3D OUT images/London Bridge0001.png',
-                        'img/VFX Artist/Blender 3D OUT images/Cube_Photo.png',
-                        'img/VFX Artist/Blender 3D OUT images/Watch_OUT_3.png',
-                        'img/VFX Artist/Blender 3D OUT images/Space watch photo3.png',
-                        'img/VFX Artist/Blender 3D OUT images/Screenshot 2026-01-31 at 9.34.47\u202fPM.png',
-                        'img/VFX Artist/Blender 3D OUT images/Screenshot 2026-01-31 at 9.33.28\u202fPM.png',
-                        'img/VFX Artist/Blender 3D OUT images/Chair_Img_1.png',
-                        'img/VFX Artist/Blender 3D OUT images/ROOM_OUT-1.png',
-                        'img/VFX Artist/Blender 3D OUT images/Photo Out.png',
-                        'img/VFX Artist/Blender 3D OUT images/Screenshot 2026-01-31 at 9.34.06\u202fPM.png',
-                        'img/VFX Artist/Blender 3D OUT images/photo1.png'
+          "blender-3d": {
+                    "title": "Blender 3D OUT images",
+                    "images": [
+                              "img/VFX Artist/Blender 3D OUT images/Chair_Img_1.png",
+                              "img/VFX Artist/Blender 3D OUT images/Cube_Photo.png",
+                              "img/VFX Artist/Blender 3D OUT images/London Bridge0001.png",
+                              "img/VFX Artist/Blender 3D OUT images/London bridge 2.png",
+                              "img/VFX Artist/Blender 3D OUT images/NIVEA PHOTO 1.png",
+                              "img/VFX Artist/Blender 3D OUT images/Photo Out.png",
+                              "img/VFX Artist/Blender 3D OUT images/ROOM_OUT-1.png",
+                              "img/VFX Artist/Blender 3D OUT images/Screenshot 2026-01-31 at 9.33.28 PM.png",
+                              "img/VFX Artist/Blender 3D OUT images/Screenshot 2026-01-31 at 9.34.47 PM.png",
+                              "img/VFX Artist/Blender 3D OUT images/Watch_OUT_3.png",
+                              "img/VFX Artist/Blender 3D OUT images/photo1.png"
                     ]
-                },
-                'maya-3d': {
-                    title: 'Maya 3D image out',
-                    images: [
-                        'img/VFX Artist/Maya 3D image out/Watch Tower_ImgOut1.jpg',
-                        'img/VFX Artist/Maya 3D image out/Screenshot 2026-01-31 at 9.41.24\u202fPM.png'
+          },
+          "maya-3d": {
+                    "title": "Maya 3D image out",
+                    "images": [
+                              "img/VFX Artist/Maya 3D image out/Screenshot 2026-01-31 at 9.41.24 PM.png",
+                              "img/VFX Artist/Maya 3D image out/Watch Tower_ImgOut1.jpg"
                     ]
-                },
-                'bike-photography': { "title": "Bike Photography", "images": ["img/Cinematographer/Bike Photography/20210320145919_IMG_2935-02-01.JPEG", "img/Cinematographer/Bike Photography/24C76A92-A368-4C89-9610-C9B727FC55B9.JPG", "img/Cinematographer/Bike Photography/DSC00188.JPG", "img/Cinematographer/Bike Photography/DSC00191.JPG", "img/Cinematographer/Bike Photography/DSC00222.JPG", "img/Cinematographer/Bike Photography/DSC00923.JPG", "img/Cinematographer/Bike Photography/DSC08465_SnapseedCopy.jpg", "img/Cinematographer/Bike Photography/DSC08783.JPG", "img/Cinematographer/Bike Photography/DSC08788.JPG", "img/Cinematographer/Bike Photography/DSC08795.JPG", "img/Cinematographer/Bike Photography/DSC08804.JPG", "img/Cinematographer/Bike Photography/IMG_20221229_0058.jpg", "img/Cinematographer/Bike Photography/IMG_20221229_0061.jpg", "img/Cinematographer/Bike Photography/IMG_20221229_0064.jpg", "img/Cinematographer/Bike Photography/IMG_3615_jpg.JPG", "img/Cinematographer/Bike Photography/IMG_3768.JPG", "img/Cinematographer/Bike Photography/IMG_4866.heic", "img/Cinematographer/Bike Photography/IMG_5926.JPG", "img/Cinematographer/Bike Photography/IMG_6152.JPG", "img/Cinematographer/Bike Photography/IMG_6153.JPG", "img/Cinematographer/Bike Photography/IMG_6157.JPG", "img/Cinematographer/Bike Photography/IMG_7282.JPG", "img/Cinematographer/Bike Photography/IMG_7545.jpg", "img/Cinematographer/Bike Photography/IMG_7607.JPG", "img/Cinematographer/Bike Photography/IMG_7662.JPG", "img/Cinematographer/Bike Photography/IMG_7677.JPG", "img/Cinematographer/Bike Photography/IMG_7681.JPG", "img/Cinematographer/Bike Photography/IMG_7705.JPG", "img/Cinematographer/Bike Photography/IMG_7790.JPG", "img/Cinematographer/Bike Photography/IMG_7831.JPG", "img/Cinematographer/Bike Photography/IMG_7850.JPG", "img/Cinematographer/Bike Photography/IMG_7863.JPG", "img/Cinematographer/Bike Photography/IMG_7866.JPG", "img/Cinematographer/Bike Photography/IMG_7868.JPG", "img/Cinematographer/Bike Photography/IMG_7873.JPG", "img/Cinematographer/Bike Photography/IMG_7876.JPG", "img/Cinematographer/Bike Photography/IMG_8025.JPG", "img/Cinematographer/Bike Photography/IMG_8039.JPG", "img/Cinematographer/Bike Photography/IMG_9230.JPG", "img/Cinematographer/Bike Photography/IMG_9240.JPG", "img/Cinematographer/Bike Photography/IMG_9280.JPG", "img/Cinematographer/Bike Photography/IMG_9356_jpg.JPG", "img/Cinematographer/Bike Photography/IMG_9385.JPG", "img/Cinematographer/Bike Photography/IMG_9539.JPG", "img/Cinematographer/Bike Photography/IMG_9614.JPG", "img/Cinematographer/Bike Photography/IMG_9840.JPG", "img/Cinematographer/Bike Photography/IMG_9845.JPG", "img/Cinematographer/Bike Photography/IMG_9847.JPG", "img/Cinematographer/Bike Photography/IMG_9852.JPG", "img/Cinematographer/Bike Photography/IMG_9884.JPG", "img/Cinematographer/Bike Photography/IMG_9885.JPG", "img/Cinematographer/Bike Photography/IMG_9897.JPG", "img/Cinematographer/Bike Photography/IMG_9929.jpg", "img/Cinematographer/Bike Photography/Screenshot 2025-09-01 at 7.24.52\u202fPM_SnapseedCopy.jpg", "img/Cinematographer/Bike Photography/Screenshot 2025-09-01 at 7.28.09\u202fPM.JPG", "img/Cinematographer/Bike Photography/Screenshot 2025-09-01 at 7.31.50\u202fPM.jpg", "img/Cinematographer/Bike Photography/Screenshot 2025-09-01 at 7.36.40\u202fPM.JPG", "img/Cinematographer/Bike Photography/ld-export-2135895f-09012025_SnapseedCopy.jpg", "img/Cinematographer/Bike Photography/ld-export-4026823f-05112023.JPG", "img/Cinematographer/Bike Photography/ld-export-482168ce-09012025.JPG", "img/Cinematographer/Bike Photography/ld-export-b1107463-02222023.JPG", "img/Cinematographer/Bike Photography/ld-export-bfb8b57f-07052023.JPG", "img/Cinematographer/Bike Photography/ld-export-de44f146-02222023.JPG"] },
-                'car-photography': { "title": "Car Photography", "images": ["img/Cinematographer/Car Photography/E4479013-00AA-446C-9BAF-953275CE3FC5.jpg", "img/Cinematographer/Car Photography/IMG_9232.JPG"] },
-                'festival-photography': { "title": "Festival Photography", "images": ["img/Cinematographer/Festival Photography/DSC07960.JPG", "img/Cinematographer/Festival Photography/DSC07982.JPG", "img/Cinematographer/Festival Photography/DSC08116.JPG", "img/Cinematographer/Festival Photography/DSC08162.JPG", "img/Cinematographer/Festival Photography/DSC08184.JPG", "img/Cinematographer/Festival Photography/DSC08190.JPG", "img/Cinematographer/Festival Photography/DSC08210.JPG", "img/Cinematographer/Festival Photography/DSC08228.JPG", "img/Cinematographer/Festival Photography/DSC08232.JPG", "img/Cinematographer/Festival Photography/DSC08235.JPG", "img/Cinematographer/Festival Photography/DSC08262.JPG", "img/Cinematographer/Festival Photography/DSC08289.JPG", "img/Cinematographer/Festival Photography/DSC08348.JPG", "img/Cinematographer/Festival Photography/IMG_0109.JPG", "img/Cinematographer/Festival Photography/ld-export-27c5ca3f-09122025.JPG"] },
-                'models': { "title": "Models", "images": ["img/Cinematographer/Models/DSC06462.JPG", "img/Cinematographer/Models/DSC08725.jpg", "img/Cinematographer/Models/DSC08725_SnapseedCopy.jpg", "img/Cinematographer/Models/DSC08751.JPG", "img/Cinematographer/Models/DSC08755.JPG", "img/Cinematographer/Models/DSC08764.jpg", "img/Cinematographer/Models/DSC08767.jpg", "img/Cinematographer/Models/DSC08790.JPG", "img/Cinematographer/Models/DSC08794 2.JPG", "img/Cinematographer/Models/DSC08794.JPG", "img/Cinematographer/Models/DSC08844.JPG", "img/Cinematographer/Models/IMG_5781.heic", "img/Cinematographer/Models/IMG_5784.heic", "img/Cinematographer/Models/IMG_5793.heic", "img/Cinematographer/Models/IMG_5799.heic", "img/Cinematographer/Models/IMG_7715.JPG", "img/Cinematographer/Models/IMG_7716.JPG"] },
-                'achivements': { "title": "Achivements", "images": ["img/Others/Achivements/IMG_3069.jpg", "img/Others/Achivements/IMG_4452.jpg", "img/Others/Achivements/IMG_4453.jpg", "img/Others/Achivements/IMG_4454.jpg", "img/Others/Achivements/IMG_5405.HEIC", "img/Others/Achivements/IMG_7181_jpg.JPG", "img/Others/Achivements/IMG_8585.jpg", "img/Others/Achivements/photo-output.HEIC"] }
+          },
+          "bike-photography": {
+                    "title": "Bike Photography",
+                    "images": [
+                              "img/Cinematographer/Bike Photography/24C76A92-A368-4C89-9610-C9B727FC55B9.JPG",
+                              "img/Cinematographer/Bike Photography/DSC00188.JPG",
+                              "img/Cinematographer/Bike Photography/DSC00191.JPG",
+                              "img/Cinematographer/Bike Photography/DSC00222.JPG",
+                              "img/Cinematographer/Bike Photography/DSC00923.JPG",
+                              "img/Cinematographer/Bike Photography/DSC08465_SnapseedCopy.jpg",
+                              "img/Cinematographer/Bike Photography/DSC08795.JPG",
+                              "img/Cinematographer/Bike Photography/DSC08804.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_20221229_0058.jpg",
+                              "img/Cinematographer/Bike Photography/IMG_20221229_0061.jpg",
+                              "img/Cinematographer/Bike Photography/IMG_3615_jpg.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_3768.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_5900.JPEG",
+                              "img/Cinematographer/Bike Photography/IMG_5926.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_6157.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_7282.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_7790.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_7850.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_7863.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_7868.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_8039.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_9280.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_9356_jpg.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_9385.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_9539.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_9614.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_9840.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_9845.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_9847.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_9885.JPG",
+                              "img/Cinematographer/Bike Photography/IMG_9897.JPG",
+                              "img/Cinematographer/Bike Photography/Screenshot 2025-09-01 at 7.24.52 PM_SnapseedCopy.jpg",
+                              "img/Cinematographer/Bike Photography/Screenshot 2025-09-01 at 7.28.09 PM.JPG",
+                              "img/Cinematographer/Bike Photography/Screenshot 2025-09-01 at 7.31.50 PM.jpg",
+                              "img/Cinematographer/Bike Photography/ld-export-2135895f-09012025_SnapseedCopy.jpg",
+                              "img/Cinematographer/Bike Photography/ld-export-b1107463-02222023.JPG",
+                              "img/Cinematographer/Bike Photography/ld-export-bfb8b57f-07052023.JPG",
+                              "img/Cinematographer/Bike Photography/ld-export-de44f146-02222023.JPG"
+                    ]
+          },
+          "car-photography": {
+                    "title": "Car Photography",
+                    "images": [
+                              "img/Cinematographer/Car Photography/E4479013-00AA-446C-9BAF-953275CE3FC5.jpg",
+                              "img/Cinematographer/Car Photography/IMG_9232.JPG"
+                    ]
+          },
+          "festival-photography": {
+                    "title": "Festival Photography",
+                    "images": [
+                              "img/Cinematographer/Festival Photography/DSC07960.JPG",
+                              "img/Cinematographer/Festival Photography/DSC07982.JPG",
+                              "img/Cinematographer/Festival Photography/DSC08116.JPG",
+                              "img/Cinematographer/Festival Photography/DSC08162.JPG",
+                              "img/Cinematographer/Festival Photography/DSC08190.JPG",
+                              "img/Cinematographer/Festival Photography/DSC08210.JPG",
+                              "img/Cinematographer/Festival Photography/DSC08228.JPG",
+                              "img/Cinematographer/Festival Photography/DSC08232.JPG",
+                              "img/Cinematographer/Festival Photography/DSC08262.JPG",
+                              "img/Cinematographer/Festival Photography/DSC08289.JPG",
+                              "img/Cinematographer/Festival Photography/DSC08348.JPG"
+                    ]
+          },
+          "models": {
+                    "title": "Models",
+                    "images": [
+                              "img/Cinematographer/Models/DSC06462.JPG",
+                              "img/Cinematographer/Models/DSC08755.JPG",
+                              "img/Cinematographer/Models/DSC08767.jpg",
+                              "img/Cinematographer/Models/DSC08794 2.JPG",
+                              "img/Cinematographer/Models/DSC08794.JPG",
+                              "img/Cinematographer/Models/IMG_7715.JPG",
+                              "img/Cinematographer/Models/IMG_7716.JPG"
+                    ]
+          },
+          "achivements": {
+                    "title": "Achivements",
+                    "images": [
+                              "img/Others/Achivements/IMG_3069.jpg",
+                              "img/Others/Achivements/IMG_4452.jpg",
+                              "img/Others/Achivements/IMG_4453.jpg",
+                              "img/Others/Achivements/IMG_4454.jpg",
+                              "img/Others/Achivements/IMG_5405.HEIC",
+                              "img/Others/Achivements/IMG_7181_jpg.JPG",
+                              "img/Others/Achivements/IMG_8585.jpg",
+                              "img/Others/Achivements/photo-output.HEIC"
+                    ]
+          }
+};
+
+            const filtersMap = {
+                'blender-3d': 'vfxartist',
+                'maya-3d': 'vfxartist',
+                'bike-photography': 'cinematographer editor',
+                'car-photography': 'cinematographer editor',
+                'festival-photography': 'cinematographer editor',
+                'models': 'cinematographer editor',
+                'achivements': 'achivements'
             };
 
-            let slideshowInterval;
-            function stopSlideshow() {
-                if (slideshowInterval) {
-                    clearInterval(slideshowInterval);
-                    slideshowInterval = null;
-                }
-                $('.mfp-play-btn').text('Play Slideshow').removeClass('active');
-            }
-            function startSlideshow() {
-                stopSlideshow();
-                slideshowInterval = setInterval(function () {
-                    $.magnificPopup.instance.next();
-                }, 3000);
-                $('.mfp-play-btn').text('Pause Slideshow').addClass('active');
-            }
+            const portfolioVideos = [
+                { src: 'img/portfolio/kappiri.png', url: 'https://youtu.be/FXr-2BpS4Po?si=4ENMvQX2Tk3CHRfu', filter: 'vfxartist' },
+                { src: 'img/portfolio/foodadvfx.png', url: 'https://youtu.be/ECdSHubQGi8?si=CpiKRRDoNOVTuQmn', filter: 'vfxartist' },
+                { src: 'img/portfolio/paperboat.png', url: 'https://m.youtube.com/watch?v=5XdWwAL--mQ', filter: 'vfxartist' },
+                { src: 'img/portfolio/phonepay.png', url: 'https://m.youtube.com/watch?v=kfiAp_Hq1eM', filter: 'vfxartist' },
+                { src: 'img/portfolio/gopro.png', url: 'https://youtu.be/TmDsi-9pgz8?si=EwDJHVq_ICLJlFHM', filter: 'vfxartist' },
+                { src: 'img/portfolio/gemini.png', url: 'https://youtu.be/UJscUDJCq1s?si=STrGlUlrOn9CnulO', filter: 'vfxartist' }
+            ];
 
-            function openFolderGallery(folderId) {
+            let allItems = [];
+            
+            portfolioVideos.forEach(v => {
+                allItems.push({ type: 'video', src: v.src, url: v.url, filters: v.filter });
+            });
+
+            // Iterate over projectFolders and add images, ensuring blender/maya are at the end
+            let folderIds = Object.keys(projectFolders);
+            folderIds = folderIds.filter(id => id !== 'blender-3d' && id !== 'maya-3d' && id !== 'achivements');
+            folderIds.push('blender-3d', 'maya-3d', 'achivements');
+
+            folderIds.forEach(folderId => {
                 const folder = projectFolders[folderId];
+                const filters = filtersMap[folderId] || '';
+                folder.images.forEach(img => {
+                    allItems.push({ type: 'image', src: img, filters: filters });
+                });
+            });
 
-                if (folder) {
-                    let gridHTML = '<div class="custom-grid">';
+            const galleryRow = document.getElementById('portfolioGalleryRow');
+            
+            const row1 = document.createElement('div');
+            const row2 = document.createElement('div');
+            const row3 = document.createElement('div');
+            row1.className = 'scroll-row-horiz';
+            row2.className = 'scroll-row-horiz';
+            row3.className = 'scroll-row-horiz';
+            const rows = [row1, row2, row3];
 
-                    folder.images.forEach(img => {
-                        gridHTML += `
-                            <div class="grid-item">
-                                <img src="${img}" alt="">
+            allItems.forEach((item, index) => {
+                let innerHTML = '';
+                if (item.type === 'video') {
+                    innerHTML = `
+                        <div class="mix ${item.filters}" style="position: relative; height: 280px; flex-shrink: 0; margin: 0; padding: 0;">
+                            <img src="${item.src}" style="height: 280px; width: auto; display: block; margin: 0; padding: 0;">
+                            <div class="portfolio__item__video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; margin: 0;">
+                                <a href="${item.url}" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                             </div>
-                        `;
-                    });
-
-                    gridHTML += '</div>';
-
-                    $.magnificPopup.open({
-                        items: {
-                            src: gridHTML,
-                            type: 'inline'
-                        },
-                        mainClass: 'mfp-fade',
-                        closeBtnInside: true
-                    });
+                        </div>
+                    `;
+                } else {
+                    innerHTML = `
+                        <div class="mix ${item.filters}" style="margin: 0; padding: 0; flex-shrink: 0;">
+                            <img src="${item.src}" style="height: 280px; width: auto; display: block; margin: 0; padding: 0;">
+                        </div>
+                    `;
                 }
-            }
-
-            $('.portfolio-folder').on('click', function () {
-                openFolderGallery($(this).data('folder'));
+                const targetRow = rows[index % 3];
+                targetRow.insertAdjacentHTML('beforeend', innerHTML);
             });
 
-            // Dynamically set cover images from the first item in each folder
-            $('.portfolio-folder').each(function () {
-                const folderId = $(this).data('folder');
-                if (projectFolders && projectFolders[folderId] && projectFolders[folderId].images.length > 0) {
-                    const firstImg = projectFolders[folderId].images[0];
-                    const $bg = $(this).find('.set-bg');
-                    $bg.attr('data-setbg', firstImg);
-                    $bg.css('background-image', 'url("' + firstImg + '")');
-                }
-            });
+            galleryRow.appendChild(row1);
+            galleryRow.appendChild(row2);
+            galleryRow.appendChild(row3);
 
-            // Check for folder parameter in URL
+            // image-popup initialization removed entirely.
+
             const urlParams = new URLSearchParams(window.location.search);
-            const folderToOpen = urlParams.get('folder');
-            if (folderToOpen) {
-                setTimeout(function () {
-                    openFolderGallery(folderToOpen);
-                }, 500);
+            const filterToApply = urlParams.get('filter');
+            const initialFilter = filterToApply ? '.' + filterToApply : 'all';
+
+            // Synchronously initialize MixItUp precisely after the items are safely injected into the DOM
+            if (typeof mixitup === 'function') {
+                mixitup(galleryRow, {
+                    load: {
+                        filter: initialFilter
+                    },
+                    animation: {
+                        enable: true
+                    }
+                });
             }
 
-            const filterToApply = urlParams.get('filter');
+            // Manually override the UI filter buttons to reflect the accurate active state
             if (filterToApply) {
-                // Find the li with the matching data-filter
-                const $filterLi = $('.portfolio__filter li[data-filter=".' + filterToApply + '"]');
-                if ($filterLi.length > 0) {
-                    setTimeout(function () {
-                        $filterLi.click();
-                    }, 600); // Wait slightly longer than the folder popup
-                }
+                $('.portfolio__filter li').removeClass('active');
+                $('.portfolio__filter li[data-filter=".' + filterToApply + '"]').addClass('active');
             }
         });
     </script>
