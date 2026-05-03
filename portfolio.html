@@ -482,10 +482,6 @@
             row3.className = 'scroll-row-horiz';
             const rows = [row1, row2, row3];
 
-            const totalAchievements = allItems.filter(item => item.filters && item.filters.includes('achivements')).length;
-            const splitLimit = Math.ceil(totalAchievements / 2);
-            let achievementCounter = 0;
-
             allItems.forEach((item, index) => {
                 let innerHTML = '';
                 if (item.type === 'video') {
@@ -504,19 +500,7 @@
                         </div>
                     `;
                 }
-
-                let targetRow;
-                if (item.filters && item.filters.includes('achivements')) {
-                    if (achievementCounter < splitLimit) {
-                        targetRow = rows[0];
-                    } else {
-                        targetRow = rows[1];
-                    }
-                    achievementCounter++;
-                } else {
-                    targetRow = rows[index % 3];
-                }
-
+                const targetRow = rows[index % 3];
                 targetRow.insertAdjacentHTML('beforeend', innerHTML);
             });
 
