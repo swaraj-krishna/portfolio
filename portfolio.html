@@ -519,33 +519,39 @@
             galleryRow.appendChild(row2);
             galleryRow.appendChild(row3);
 
-            // Re-initialize MixItUp for the new structure
-            if (typeof mixitup !== 'undefined') {
-                const mixer = mixitup('#portfolioGalleryRow', {
-                    selectors: {
-                        target: '.mix'
-                    },
-                    animation: {
-                        duration: 300
-                    }
-                });
-                $('#portfolioGalleryRow').addClass('mixitup-ready');
+            // We bypass MixItUp completely to avoid conflicts with our 3-row flexbox layout!
+            $('#portfolioGalleryRow').addClass('mixitup-ready'); // Prevent main.js from initializing MixItUp
+
+            // Manual completely robust filtering logic
+            function applyFilter(filterValue, $element) {
+                $('.portfolio__filter li').removeClass('active');
+                if ($element) {
+                    $element.addClass('active');
+                } else {
+                    $('.portfolio__filter li[data-filter="' + filterValue + '"]').addClass('active');
+                }
+                
+                if (filterValue === '*') {
+                    $('.mix').show();
+                } else {
+                    $('.mix').hide();
+                    $(filterValue).show();
+                }
             }
 
-            // image-popup initialization removed entirely.
+            $('.portfolio__filter li').on('click', function(e) {
+                e.preventDefault();
+                const filterValue = $(this).attr('data-filter');
+                applyFilter(filterValue, $(this));
+            });
 
+            // Apply initial filter from URL params if present
             const urlParams = new URLSearchParams(window.location.search);
             const filterToApply = urlParams.get('filter');
             if (filterToApply) {
-                // Wait for high res images and main.js to initialize the MixItUp layout before dispatching URL filters
-                $(window).on('load', function() {
-                    const $filterLi = $('.portfolio__filter li[data-filter=".' + filterToApply + '"]');
-                    if ($filterLi.length > 0) {
-                        setTimeout(function () {
-                            $filterLi.click();
-                        }, 50); 
-                    }
-                });
+                setTimeout(function() {
+                    applyFilter('.' + filterToApply, null);
+                }, 100); 
             }
         });
     </script>
