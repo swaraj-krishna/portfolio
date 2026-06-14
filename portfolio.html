@@ -161,6 +161,27 @@
                 box-shadow: 0 0 15px rgba(0, 191, 231, 0.5);
             }
 
+            /* Mobile and Tablet optimization: Make buttons always visible and clickable */
+            @media (max-width: 991px) {
+                #portfolioGalleryRow .mix .portfolio__item__video {
+                    background: rgba(16, 0, 40, 0.2) !important;
+                    opacity: 1 !important;
+                }
+
+                #portfolioGalleryRow .play-btn {
+                    transform: scale(1) !important;
+                    background: rgba(16, 0, 40, 0.6) !important;
+                    border-color: rgba(255, 255, 255, 0.8) !important;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+                }
+
+                #portfolioGalleryRow .play-btn:active {
+                    background: #00bfe7 !important;
+                    border-color: #00bfe7 !important;
+                    transform: scale(0.9) !important;
+                }
+            }
+
         </style>
         <div class="container-fluid" style="padding: 0; margin: 0;">
             <div class="portfolio__gallery" id="portfolioGalleryRow">
