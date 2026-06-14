@@ -1262,8 +1262,13 @@ ol {
 }
 .mfp-close {
   position: fixed !important;
-  top: 15px;
-  right: 20px;
+  top: 15px !important;
+  right: 20px !important;
+  width: 50px !important;
+  height: 50px !important;
+  line-height: 50px !important;
+  text-align: center !important;
+  padding: 0 !important;
   z-index: 9999;
   font-size: 32px;
   color: #ffffff;

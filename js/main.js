@@ -165,8 +165,8 @@
         delegate: '.video-popup',
         type: 'iframe',
         iframe: {
-            markup: '<div class="mfp-iframe-scaler">'+
-                    '<div class="mfp-close"></div>'+
+            markup: '<button type="button" class="mfp-close">&times;</button>'+
+                    '<div class="mfp-iframe-scaler">'+
                     '<iframe class="mfp-iframe" frameborder="0" allowfullscreen allow="autoplay; encrypted-media; picture-in-picture"></iframe>'+
                     '</div>',
             patterns: {

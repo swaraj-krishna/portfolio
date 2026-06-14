@@ -152,9 +152,6 @@
 
             #portfolioGalleryRow .mix:hover .play-btn {
                 transform: scale(1);
-            }
-
-            #portfolioGalleryRow .play-btn:hover {
                 background: #00bfe7;
                 border-color: #00bfe7;
                 color: #ffffff;
@@ -551,19 +548,20 @@
                         <img src="${item.src}"
                             style="width:100%; height:280px; object-fit:cover;">
 
-                        <div class="portfolio__item__video"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+                        <a href="${item.url}" class="video-popup" style="position:absolute;top:0;left:0;width:100%;height:100%;display:block;text-decoration:none;z-index:5;">
+                            <div class="portfolio__item__video"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;">
 
-                            <a href="${item.url}"
-                            class="play-btn video-popup">
-                                <i class="fa fa-play"></i>
-                            </a>
+                                <span class="play-btn">
+                                    <i class="fa fa-play"></i>
+                                </span>
 
-                            <div class="portfolio-hover-title">
-                                ${item.description || ''}
+                                <div class="portfolio-hover-title">
+                                    ${item.description || ''}
+                                </div>
+
                             </div>
-
-                        </div>
+                        </a>
 
                     </div>
                 `;
@@ -577,19 +575,20 @@
                         <img src="${item.src}"
                             style="width:100%; height:280px; object-fit:cover;">
 
-                        <div class="portfolio__item__video"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+                        <a href="${item.src}" class="image-popup" style="position:absolute;top:0;left:0;width:100%;height:100%;display:block;text-decoration:none;z-index:5;">
+                            <div class="portfolio__item__video"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;">
 
-                            <a href="${item.src}"
-                            class="play-btn image-popup">
-                                <i class="fa fa-eye"></i>
-                            </a>
+                                <span class="play-btn">
+                                    <i class="fa fa-eye"></i>
+                                </span>
 
-                            <div class="portfolio-hover-title">
-                                ${item.description || ''}
+                                <div class="portfolio-hover-title">
+                                    ${item.description || ''}
+                                </div>
+
                             </div>
-
-                        </div>
+                        </a>
 
                     </div>
                 `;
