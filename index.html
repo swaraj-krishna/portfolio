@@ -10,8 +10,8 @@
     <title>Swaraj Krishna</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Css Styles -->
@@ -310,15 +310,21 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/mixitup.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/components.js"></script>
+    <script defer src="js/jquery-3.3.1.min.js"></script>
+    <script defer src="js/bootstrap.min.js"></script>
+    <script defer src="js/jquery.magnific-popup.min.js"></script>
+    <script defer src="js/mixitup.min.js"></script>
+    <script defer src="js/masonry.pkgd.min.js"></script>
+    <script defer src="js/jquery.slicknav.js"></script>
+    <script defer src="js/owl.carousel.min.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/components.js"></script>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("preloder")?.remove();
+        });
+    </script>
 </body>
 
 </html>

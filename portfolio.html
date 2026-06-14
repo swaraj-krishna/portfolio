@@ -10,8 +10,8 @@
     <title>Swaraj Krishna</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+    <link rel="preconnect"  href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect"  href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Css Styles -->
@@ -456,18 +456,25 @@
             };
 
             const portfolioVideos = [
-                { src: 'img/portfolio/kappiri.png', url: 'https://youtu.be/FXr-2BpS4Po?si=4ENMvQX2Tk3CHRfu', filter: 'vfxartist' },
-                { src: 'img/portfolio/foodadvfx.png', url: 'https://youtu.be/ECdSHubQGi8?si=CpiKRRDoNOVTuQmn', filter: 'vfxartist' },
-                { src: 'img/portfolio/paperboat.png', url: 'https://m.youtube.com/watch?v=5XdWwAL--mQ', filter: 'vfxartist' },
-                { src: 'img/portfolio/phonepay.png', url: 'https://m.youtube.com/watch?v=kfiAp_Hq1eM', filter: 'vfxartist' },
+                { src: 'img/portfolio/kappiri.png', url: 'https://youtu.be/FXr-2BpS4Po?si=4ENMvQX2Tk3CHRfu', filter: ['vfxartist','cinematographer','editor'] },
+                { src: 'img/portfolio/foodadvfx.png', url: 'https://youtu.be/ECdSHubQGi8?si=CpiKRRDoNOVTuQmn', filter: ['vfxartist','cinematographer','editor'] },
+                { src: 'img/portfolio/paperboat.png', url: 'https://m.youtube.com/watch?v=5XdWwAL--mQ', filter: ['vfxartist','cinematographer','editor'] },
+                { src: 'img/portfolio/phonepay.png', url: 'https://m.youtube.com/watch?v=kfiAp_Hq1eM', filter: ['vfxartist','cinematographer','editor'] },
                 { src: 'img/portfolio/gopro.png', url: 'https://youtu.be/TmDsi-9pgz8?si=EwDJHVq_ICLJlFHM', filter: 'vfxartist' },
-                { src: 'img/portfolio/gemini.png', url: 'https://youtu.be/UJscUDJCq1s?si=STrGlUlrOn9CnulO', filter: 'vfxartist' }
+                { src: 'img/portfolio/gemini.png', url: 'https://youtu.be/UJscUDJCq1s?si=STrGlUlrOn9CnulO', filter: ['vfxartist','cinematographer','editor'] }
             ];
 
             let allItems = [];
 
-            portfolioVideos.forEach(v => {
-                allItems.push({ type: 'video', src: v.src, url: v.url, filters: v.filter });
+           portfolioVideos.forEach(v => {
+                allItems.push({
+                    type: 'video',
+                    src: v.src,
+                    url: v.url,
+                    filters: Array.isArray(v.filter)
+                        ? v.filter.join(' ')
+                        : v.filter
+                });
             });
 
             // Iterate over projectFolders and add images, ensuring blender/maya are at the end
@@ -553,6 +560,11 @@
                     applyFilter('.' + filterToApply, null);
                 }, 100); 
             }
+        });
+    </script>
+     <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("preloder")?.remove();
         });
     </script>
 </body>
