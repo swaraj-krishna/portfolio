@@ -1268,11 +1268,13 @@ ol {
   font-size: 32px;
   color: #ffffff;
   opacity: 1;
+  transition: all 0.3s ease;
 }
 
 /* Optional: better visibility */
 .mfp-close:hover {
-  color: #ffffff;
+  color: #00bfe7 !important;
+  transform: scale(1.1) rotate(90deg);
 }
 @media (max-width: 992px) {
   .custom-grid {
@@ -2103,13 +2105,33 @@ ol {
     font-size: 12px;
     border-radius: 4px;
     text-transform: uppercase;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
 .mfp-play-btn:hover {
     background: #00bfe7;
     border-color: #00bfe7;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 191, 231, 0.3);
 }
 .mfp-play-btn.active {
     background: #d9534f;
     border-color: #d9534f;
+}
+.mfp-play-btn.active:hover {
+    background: #c9302c;
+    border-color: #c9302c;
+    box-shadow: 0 4px 10px rgba(217, 83, 79, 0.3);
+}
+
+/* Custom premium popup navigation arrows */
+.mfp-arrow {
+    transition: all 0.3s ease !important;
+    opacity: 0.6 !important;
+}
+.mfp-arrow:hover {
+    opacity: 1 !important;
+    transform: scale(1.1);
+}
+.mfp-arrow:active {
+    transform: scale(0.95);
 }

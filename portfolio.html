@@ -105,20 +105,13 @@
             </div>
         </div>
         <style>
-            #portfolioGalleryRow {
-                display: flex;
-                flex-direction: column;
-                height: 840px;
-                /* exactly 3 rows of 280px height */
-                overflow-x: auto;
-                overflow-y: hidden;
-                scrollbar-width: none;
-                /* Firefox */
-                -ms-overflow-style: none;
-                /* IE and Edge */
-                margin: 0;
-                padding: 0;
+           #portfolioGalleryRow {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
                 gap: 0;
+                padding: 0;
+                margin: 0;
+                width: 100%;
             }
 
             #portfolioGalleryRow::-webkit-scrollbar {
@@ -126,21 +119,48 @@
                 /* Chrome, Safari, Opera */
             }
 
-            .scroll-row-horiz {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                height: 280px;
+            #portfolioGalleryRow .mix {
                 margin: 0;
                 padding: 0;
-                gap: 0;
+                line-height: 0;
+                width: 100% !important;
             }
 
-            #portfolioGalleryRow .mix {
-                margin: 0 !important;
-                padding: 0 !important;
-                border: none !important;
+            #portfolioGalleryRow img {
+                height: 280px;
+                width: 100%;
+                display: block;
+                object-fit: cover;
             }
+
+            /* Modern hover overlay effects for gallery items */
+            #portfolioGalleryRow .mix .portfolio__item__video {
+                background: rgba(16, 0, 40, 0); /* Start fully transparent */
+                transition: all 0.3s ease;
+                opacity: 0; /* Hidden by default */
+            }
+
+            #portfolioGalleryRow .mix:hover .portfolio__item__video {
+                background: rgba(16, 0, 40, 0.6); /* Fade in background overlay */
+                opacity: 1; /* Show on hover */
+            }
+
+            #portfolioGalleryRow .play-btn {
+                transition: all 0.3s ease !important;
+                transform: scale(0.8);
+            }
+
+            #portfolioGalleryRow .mix:hover .play-btn {
+                transform: scale(1);
+            }
+
+            #portfolioGalleryRow .play-btn:hover {
+                background: #00bfe7;
+                border-color: #00bfe7;
+                color: #ffffff;
+                box-shadow: 0 0 15px rgba(0, 191, 231, 0.5);
+            }
+
         </style>
         <div class="container-fluid" style="padding: 0; margin: 0;">
             <div class="portfolio__gallery" id="portfolioGalleryRow">
@@ -355,40 +375,18 @@
                 "bike-photography": {
                     "title": "Bike Photography",
                     "images": [
-                        "img/Cinematographer/Bike Photography/24C76A92-A368-4C89-9610-C9B727FC55B9.JPG",
                         "img/Cinematographer/Bike Photography/DSC00188.JPG",
-                        "img/Cinematographer/Bike Photography/DSC00191.JPG",
-                        "img/Cinematographer/Bike Photography/DSC00222.JPG",
-                        "img/Cinematographer/Bike Photography/DSC00923.JPG",
                         "img/Cinematographer/Bike Photography/DSC08465_SnapseedCopy.jpg",
-                        "img/Cinematographer/Bike Photography/DSC08795.JPG",
                         "img/Cinematographer/Bike Photography/DSC08804.JPG",
-                        "img/Cinematographer/Bike Photography/IMG_20221229_0058.jpg",
                         "img/Cinematographer/Bike Photography/IMG_20221229_0061.jpg",
-                        "img/Cinematographer/Bike Photography/IMG_3615_jpg.JPG",
-                        "img/Cinematographer/Bike Photography/IMG_3768.JPG",
-                        "img/Cinematographer/Bike Photography/IMG_5900.JPEG",
                         "img/Cinematographer/Bike Photography/IMG_5926.JPG",
                         "img/Cinematographer/Bike Photography/IMG_6157.JPG",
                         "img/Cinematographer/Bike Photography/IMG_7282.JPG",
                         "img/Cinematographer/Bike Photography/IMG_7790.JPG",
-                        "img/Cinematographer/Bike Photography/IMG_7850.JPG",
                         "img/Cinematographer/Bike Photography/IMG_7863.JPG",
-                        "img/Cinematographer/Bike Photography/IMG_7868.JPG",
                         "img/Cinematographer/Bike Photography/IMG_8039.JPG",
-                        "img/Cinematographer/Bike Photography/IMG_9280.JPG",
-                        "img/Cinematographer/Bike Photography/IMG_9356_jpg.JPG",
-                        "img/Cinematographer/Bike Photography/IMG_9385.JPG",
-                        "img/Cinematographer/Bike Photography/IMG_9539.JPG",
-                        "img/Cinematographer/Bike Photography/IMG_9614.JPG",
-                        "img/Cinematographer/Bike Photography/IMG_9840.JPG",
                         "img/Cinematographer/Bike Photography/IMG_9845.JPG",
-                        "img/Cinematographer/Bike Photography/IMG_9847.JPG",
                         "img/Cinematographer/Bike Photography/IMG_9885.JPG",
-                        "img/Cinematographer/Bike Photography/IMG_9897.JPG",
-                        "img/Cinematographer/Bike Photography/Screenshot 2025-09-01 at 7.24.52 PM_SnapseedCopy.jpg",
-                        "img/Cinematographer/Bike Photography/Screenshot 2025-09-01 at 7.28.09 PM.JPG",
-                        "img/Cinematographer/Bike Photography/Screenshot 2025-09-01 at 7.31.50 PM.jpg",
                         "img/Cinematographer/Bike Photography/ld-export-2135895f-09012025_SnapseedCopy.jpg",
                         "img/Cinematographer/Bike Photography/ld-export-b1107463-02222023.JPG",
                         "img/Cinematographer/Bike Photography/ld-export-bfb8b57f-07052023.JPG",
@@ -456,12 +454,12 @@
             };
 
             const portfolioVideos = [
-                { src: 'img/portfolio/kappiri.png', url: 'https://youtu.be/FXr-2BpS4Po?si=4ENMvQX2Tk3CHRfu', filter: ['vfxartist','cinematographer'] },
-                { src: 'img/portfolio/foodadvfx.png', url: 'https://youtu.be/ECdSHubQGi8?si=CpiKRRDoNOVTuQmn', filter: ['vfxartist','cinematographer'] },
-                { src: 'img/portfolio/paperboat.png', url: 'https://m.youtube.com/watch?v=5XdWwAL--mQ', filter: ['vfxartist','cinematographer'] },
-                { src: 'img/portfolio/phonepay.png', url: 'https://m.youtube.com/watch?v=kfiAp_Hq1eM', filter: ['vfxartist','cinematographer'] },
+                { src: 'img/portfolio/kappiri.png', url: 'https://youtu.be/FXr-2BpS4Po?si=4ENMvQX2Tk3CHRfu', filter: ['vfxartist'] },
+                { src: 'img/portfolio/foodadvfx.png', url: 'https://youtu.be/ECdSHubQGi8?si=CpiKRRDoNOVTuQmn', filter: ['vfxartist'] },
+                { src: 'img/portfolio/paperboat.png', url: 'https://m.youtube.com/watch?v=5XdWwAL--mQ', filter: ['vfxartist'] },
+                { src: 'img/portfolio/phonepay.png', url: 'https://m.youtube.com/watch?v=kfiAp_Hq1eM', filter: ['vfxartist'] },
                 { src: 'img/portfolio/gopro.png', url: 'https://youtu.be/TmDsi-9pgz8?si=EwDJHVq_ICLJlFHM', filter: 'vfxartist' },
-                { src: 'img/portfolio/gemini.png', url: 'https://youtu.be/UJscUDJCq1s?si=STrGlUlrOn9CnulO', filter: ['vfxartist','cinematographer'] }
+                { src: 'img/portfolio/gemini.png', url: 'https://youtu.be/UJscUDJCq1s?si=STrGlUlrOn9CnulO', filter: ['vfxartist'] }
             ];
 
             let allItems = [];
@@ -492,39 +490,57 @@
 
             const galleryRow = document.getElementById('portfolioGalleryRow');
 
-            const row1 = document.createElement('div');
-            const row2 = document.createElement('div');
-            const row3 = document.createElement('div');
-            row1.className = 'scroll-row-horiz';
-            row2.className = 'scroll-row-horiz';
-            row3.className = 'scroll-row-horiz';
-            const rows = [row1, row2, row3];
+           allItems.forEach(item => {
 
-            allItems.forEach((item, index) => {
-                let innerHTML = '';
-                if (item.type === 'video') {
-                    innerHTML = `
-                        <div class="mix ${item.filters}" style="position: relative; height: 280px; flex-shrink: 0; margin: 0; padding: 0;">
-                            <img src="${item.src}" style="height: 280px; width: auto; display: block; margin: 0; padding: 0;">
-                            <div class="portfolio__item__video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; margin: 0;">
-                                <a href="${item.url}" class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                            </div>
-                        </div>
-                    `;
-                } else {
-                    innerHTML = `
-                        <div class="mix ${item.filters}" style="margin: 0; padding: 0; flex-shrink: 0;">
-                            <img src="${item.src}" style="height: 280px; width: auto; display: block; margin: 0; padding: 0;">
-                        </div>
-                    `;
-                }
-                const targetRow = rows[index % 3];
-                targetRow.insertAdjacentHTML('beforeend', innerHTML);
-            });
+            let innerHTML = '';
 
-            galleryRow.appendChild(row1);
-            galleryRow.appendChild(row2);
-            galleryRow.appendChild(row3);
+            if (item.type === 'video') {
+
+                innerHTML = `
+                    <div class="mix ${item.filters}"
+                        style="position:relative; width:400px;">
+
+                        <img src="${item.src}"
+                            style="width:100%; height:280px; object-fit:cover;">
+
+                        <div class="portfolio__item__video"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;">
+
+                            <a href="${item.url}"
+                            class="play-btn video-popup">
+                                <i class="fa fa-play"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+                `;
+
+            } else {
+
+                innerHTML = `
+                    <div class="mix ${item.filters}"
+                        style="position:relative; width:400px;">
+
+                        <img src="${item.src}"
+                            style="width:100%; height:280px; object-fit:cover;">
+
+                        <div class="portfolio__item__video"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;">
+
+                            <a href="${item.src}"
+                            class="play-btn image-popup">
+                                <i class="fa fa-eye"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+                `;
+            }
+
+            galleryRow.insertAdjacentHTML('beforeend', innerHTML);
+        });
 
             // We bypass MixItUp completely to avoid conflicts with our 3-row flexbox layout!
             $('#portfolioGalleryRow').addClass('mixitup-ready'); // Prevent main.js from initializing MixItUp
@@ -560,6 +576,16 @@
                     applyFilter('.' + filterToApply, null);
                 }, 100); 
             }
+
+            // Initialize image popup for images (only targeting currently visible ones)
+            $('#portfolioGalleryRow').magnificPopup({
+                delegate: '.image-popup:visible',
+                type: 'image',
+                gallery: {
+                    enabled: true
+                },
+                mainClass: 'mfp-fade'
+            });
         });
     </script>
      <script>
