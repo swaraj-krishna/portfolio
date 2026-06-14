@@ -161,6 +161,27 @@
                 box-shadow: 0 0 15px rgba(0, 191, 231, 0.5);
             }
 
+            #portfolioGalleryRow .portfolio-hover-title {
+                margin-top: 15px;
+                color: rgba(255, 255, 255, 0.85);
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 14px;
+                font-weight: 600;
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                opacity: 0;
+                transform: translateY(10px);
+                transition: all 0.3s ease;
+                padding: 0 10px;
+                line-height: 1.4;
+            }
+
+            #portfolioGalleryRow .mix:hover .portfolio-hover-title {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
             /* Mobile and Tablet optimization: Make buttons always visible and clickable */
             @media (max-width: 991px) {
                 #portfolioGalleryRow .mix .portfolio__item__video {
@@ -179,6 +200,11 @@
                     background: #00bfe7 !important;
                     border-color: #00bfe7 !important;
                     transform: scale(0.9) !important;
+                }
+
+                #portfolioGalleryRow .portfolio-hover-title {
+                    opacity: 1 !important;
+                    transform: translateY(0) !important;
                 }
             }
 
@@ -475,21 +501,22 @@
             };
 
             const portfolioVideos = [
-                { src: 'img/portfolio/kappiri.png', url: 'https://youtu.be/FXr-2BpS4Po?si=4ENMvQX2Tk3CHRfu', filter: ['vfxartist'] },
-                { src: 'img/portfolio/foodadvfx.png', url: 'https://youtu.be/ECdSHubQGi8?si=CpiKRRDoNOVTuQmn', filter: ['vfxartist'] },
-                { src: 'img/portfolio/paperboat.png', url: 'https://m.youtube.com/watch?v=5XdWwAL--mQ', filter: ['vfxartist'] },
-                { src: 'img/portfolio/phonepay.png', url: 'https://m.youtube.com/watch?v=kfiAp_Hq1eM', filter: ['vfxartist'] },
-                { src: 'img/portfolio/gopro.png', url: 'https://youtu.be/TmDsi-9pgz8?si=EwDJHVq_ICLJlFHM', filter: 'vfxartist' },
-                { src: 'img/portfolio/gemini.png', url: 'https://youtu.be/UJscUDJCq1s?si=STrGlUlrOn9CnulO', filter: ['vfxartist'] }
+                { src: 'img/portfolio/kappiri.png', url: 'https://youtu.be/FXr-2BpS4Po?si=4ENMvQX2Tk3CHRfu', description:"KAPPIRI-Documentary", filter: ['vfxartist'] },
+                { src: 'img/portfolio/foodadvfx.png', url: 'https://youtu.be/ECdSHubQGi8?si=CpiKRRDoNOVTuQmn', description:"KHUSRU FOODS AD", filter: ['vfxartist'] },
+                { src: 'img/portfolio/paperboat.png', url: 'https://m.youtube.com/watch?v=5XdWwAL--mQ', description:"PAPERBOAT - AD", filter: ['vfxartist'] },
+                { src: 'img/portfolio/phonepay.png', url: 'https://m.youtube.com/watch?v=kfiAp_Hq1eM', description:"PhonePe - AD", filter: ['vfxartist'] },
+                { src: 'img/portfolio/gopro.png', url: 'https://youtu.be/TmDsi-9pgz8?si=EwDJHVq_ICLJlFHM', description:"GoPGoPro13 - 3D Motion Graphics ADro", filter: 'vfxartist' },
+                { src: 'img/portfolio/gemini.png', url: 'https://youtu.be/UJscUDJCq1s?si=STrGlUlrOn9CnulO', description:"Google Gemini - 2D Motion Graphics AD", filter: ['vfxartist'] }
             ];
 
             let allItems = [];
 
-           portfolioVideos.forEach(v => {
+            portfolioVideos.forEach(v => {
                 allItems.push({
                     type: 'video',
                     src: v.src,
                     url: v.url,
+                    description: v.description,
                     filters: Array.isArray(v.filter)
                         ? v.filter.join(' ')
                         : v.filter
@@ -505,7 +532,7 @@
                 const folder = projectFolders[folderId];
                 const filters = filtersMap[folderId] || '';
                 folder.images.forEach(img => {
-                    allItems.push({ type: 'image', src: img, filters: filters });
+                    allItems.push({ type: 'image', src: img, filters: filters, description: folder.title });
                 });
             });
 
@@ -525,12 +552,16 @@
                             style="width:100%; height:280px; object-fit:cover;">
 
                         <div class="portfolio__item__video"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;">
 
                             <a href="${item.url}"
                             class="play-btn video-popup">
                                 <i class="fa fa-play"></i>
                             </a>
+
+                            <div class="portfolio-hover-title">
+                                ${item.description || ''}
+                            </div>
 
                         </div>
 
@@ -547,12 +578,16 @@
                             style="width:100%; height:280px; object-fit:cover;">
 
                         <div class="portfolio__item__video"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;">
 
                             <a href="${item.src}"
                             class="play-btn image-popup">
                                 <i class="fa fa-eye"></i>
                             </a>
+
+                            <div class="portfolio-hover-title">
+                                ${item.description || ''}
+                            </div>
 
                         </div>
 
