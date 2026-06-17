@@ -73,18 +73,20 @@
     <!-- Header End -->
 
     <!-- Breadcrumb Begin -->
-    <div style="background-color: black;" class="breadcrumb-option spad set-bg" data-setbg="">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Work that Speaks</h2>
-                        <div class="breadcrumb__links">
-                            <span>Crafted With Purpose</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div id="portfolio-hero" style="background-color: black; position: relative; overflow: hidden;" class="breadcrumb-option spad set-bg" data-setbg="">
+        <video id="hero-video" autoplay loop playsinline style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; min-width: 100%; min-height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: 1; pointer-events: none;">
+            <source src="img/Show Reel/VFX-Hightlight.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="hero-video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); z-index: 2; transition: opacity 0.5s ease;"></div>
+        <!-- Video Controls on Bottom Right -->
+        <div style="position: absolute; bottom: 20px; right: 20px; z-index: 4; display: flex; gap: 10px;">
+            <button id="video-play-btn" class="video-control-btn" title="Play/Pause Showreel">
+                <i class="fa fa-pause" id="video-play-icon"></i>
+            </button>
+            <button id="video-mute-btn" class="video-control-btn" title="Mute/Unmute Showreel">
+                <i class="fa fa-volume-off" id="video-mute-icon"></i>
+            </button>
         </div>
     </div>
     <!-- Breadcrumb End -->
@@ -199,12 +201,49 @@
                     transform: scale(0.9) !important;
                 }
 
-                #portfolioGalleryRow .portfolio-hover-title {
-                    opacity: 1 !important;
-                    transform: translateY(0) !important;
-                }
             }
 
+            /* Breadcrumb Video Styling */
+            #portfolio-hero {
+                height: 500px;
+                padding: 0 !important;
+            }
+
+            .video-control-btn {
+                background: rgba(0, 0, 0, 0.6);
+                border: 1.5px solid rgba(255, 255, 255, 0.5);
+                color: #ffffff;
+                border-radius: 50%;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                outline: none;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            }
+
+            .video-control-btn:hover {
+                background: #00bfe7;
+                border-color: #00bfe7;
+                transform: scale(1.1);
+                box-shadow: 0 0 15px rgba(0, 191, 231, 0.6);
+            }
+
+            .video-control-btn:active {
+                transform: scale(0.95);
+            }
+
+            .video-control-btn i {
+                font-size: 16px;
+            }
+
+            /* Remove header border-bottom on this page only */
+            .header {
+                border-bottom: none !important;
+            }
         </style>
         <div class="container-fluid" style="padding: 0; margin: 0;">
             <div class="portfolio__gallery" id="portfolioGalleryRow">
@@ -396,51 +435,83 @@
                 "blender-3d": {
                     "title": "Blender 3D OUT images",
                     "images": [
-                        "img/VFX Artist/Blender 3D OUT images/Chair_Img_1.png",
-                        "img/VFX Artist/Blender 3D OUT images/Cube_Photo.png",
-                        "img/VFX Artist/Blender 3D OUT images/London Bridge0001.png",
-                        "img/VFX Artist/Blender 3D OUT images/London bridge 2.png",
-                        "img/VFX Artist/Blender 3D OUT images/NIVEA PHOTO 1.png",
+                        "img/VFX Artist/Blender 3D OUT images/3D police Station Concept.png",
+                        "img/VFX Artist/Blender 3D OUT images/Cube_3D.png",
+                        "img/VFX Artist/Blender 3D OUT images/Galaxy Watch 3D (2).png",
+                        "img/VFX Artist/Blender 3D OUT images/Galaxy Watch 3D.png",
+                        "img/VFX Artist/Blender 3D OUT images/Gopro13-3D.png",
+                        "img/VFX Artist/Blender 3D OUT images/Gopro13...png",
+                        "img/VFX Artist/Blender 3D OUT images/Gopro13..png",
+                        "img/VFX Artist/Blender 3D OUT images/Miidnight chase 3D Compositing..png",
+                        "img/VFX Artist/Blender 3D OUT images/Miidnight chase 3D Compositing.png",
+                        "img/VFX Artist/Blender 3D OUT images/NIVEA 3D Model.png",
                         "img/VFX Artist/Blender 3D OUT images/Photo Out.png",
-                        "img/VFX Artist/Blender 3D OUT images/ROOM_OUT-1.png",
-                        "img/VFX Artist/Blender 3D OUT images/Screenshot 2026-01-31 at 9.33.28 PM.png",
-                        "img/VFX Artist/Blender 3D OUT images/Screenshot 2026-01-31 at 9.34.47 PM.png",
-                        "img/VFX Artist/Blender 3D OUT images/Watch_OUT_3.png",
-                        "img/VFX Artist/Blender 3D OUT images/photo1.png"
+                        "img/VFX Artist/Blender 3D OUT images/ROOM_3D.png",
+                        "img/VFX Artist/Blender 3D OUT images/Toaster-3D.png",
+                        "img/VFX Artist/Blender 3D OUT images/Watch Tower-3d.jpg"
                     ]
                 },
-                "maya-3d": {
-                    "title": "Maya 3D image out",
+                "vfx-studio": {
+                    "title": "VFX Studio",
                     "images": [
-                        "img/VFX Artist/Maya 3D image out/Screenshot 2026-01-31 at 9.41.24 PM.png",
-                        "img/VFX Artist/Maya 3D image out/Watch Tower_ImgOut1.jpg"
+                        "img/VFX Artist/VFX Studio/DSC01805.JPG",
+                        "img/VFX Artist/VFX Studio/DSC01825.JPG"
+                    ]
+                },
+                "cinematography": {
+                    "title": "Cinematography",
+                    "images": [
+                        "img/Cinematographer/Cinematogrpahy/0C6A9756.JPG",
+                        "img/Cinematographer/Cinematogrpahy/DSC01717 2.jpg",
+                        "img/Cinematographer/Cinematogrpahy/DSC01726.JPG",
+                        "img/Cinematographer/Cinematogrpahy/DSC01733.JPG",
+                        "img/Cinematographer/Cinematogrpahy/DSC01758.JPG",
+                        "img/Cinematographer/Cinematogrpahy/DSC01769.JPG",
+                        "img/Cinematographer/Cinematogrpahy/DSC01831.JPG",
+                        "img/Cinematographer/Cinematogrpahy/DSC08658.JPG"
                     ]
                 },
                 "bike-photography": {
                     "title": "Bike Photography",
                     "images": [
-                        "img/Cinematographer/Bike Photography/DSC00188.JPG",
+                        "img/Cinematographer/Bike Photography/DSC00188.JPG", 
+                        "img/Cinematographer/Bike Photography/DSC00191.JPG",
+                        "img/Cinematographer/Bike Photography/DSC00923.JPG",
                         "img/Cinematographer/Bike Photography/DSC08465_SnapseedCopy.jpg",
-                        "img/Cinematographer/Bike Photography/DSC08804.JPG",
-                        "img/Cinematographer/Bike Photography/IMG_20221229_0061.jpg",
+                        "img/Cinematographer/Bike Photography/DSC08788.JPG",
+                        "img/Cinematographer/Bike Photography/DSC08795.JPG",
+                        "img/Cinematographer/Bike Photography/IMG_3768.JPG",
                         "img/Cinematographer/Bike Photography/IMG_5926.JPG",
+                        "img/Cinematographer/Bike Photography/IMG_6153.JPG",
                         "img/Cinematographer/Bike Photography/IMG_6157.JPG",
-                        "img/Cinematographer/Bike Photography/IMG_7282.JPG",
+                        "img/Cinematographer/Bike Photography/IMG_7677.JPG",
+                        "img/Cinematographer/Bike Photography/IMG_7705.JPG",
                         "img/Cinematographer/Bike Photography/IMG_7790.JPG",
-                        "img/Cinematographer/Bike Photography/IMG_7863.JPG",
-                        "img/Cinematographer/Bike Photography/IMG_8039.JPG",
+                        "img/Cinematographer/Bike Photography/IMG_7850.JPG",
+                        "img/Cinematographer/Bike Photography/IMG_7866.JPG",
+                        "img/Cinematographer/Bike Photography/IMG_7873.JPG",
+                        "img/Cinematographer/Bike Photography/IMG_9230.JPG",
+                        "img/Cinematographer/Bike Photography/IMG_9356_jpg.JPG",
+                        "img/Cinematographer/Bike Photography/IMG_9614.JPG",
+                        "img/Cinematographer/Bike Photography/IMG_9840.JPG",
                         "img/Cinematographer/Bike Photography/IMG_9845.JPG",
                         "img/Cinematographer/Bike Photography/IMG_9885.JPG",
+                        "img/Cinematographer/Bike Photography/IMG_9897.JPG",
+                        "img/Cinematographer/Bike Photography/IMG_20221229_0058.jpg",
+                        "img/Cinematographer/Bike Photography/ld-export-482168ce-09012025.JPG",
                         "img/Cinematographer/Bike Photography/ld-export-2135895f-09012025_SnapseedCopy.jpg",
+                        "img/Cinematographer/Bike Photography/ld-export-4026823f-05112023.JPG",
                         "img/Cinematographer/Bike Photography/ld-export-b1107463-02222023.JPG",
                         "img/Cinematographer/Bike Photography/ld-export-bfb8b57f-07052023.JPG",
-                        "img/Cinematographer/Bike Photography/ld-export-de44f146-02222023.JPG"
+                        "img/Cinematographer/Bike Photography/Screenshot 2025-09-01 at 7.24.52 PM_SnapseedCopy.jpg",
+                        "img/Cinematographer/Bike Photography/Screenshot 2025-09-01 at 7.28.09 PM.JPG",
+                        "img/Cinematographer/Bike Photography/Screenshot 2025-09-01 at 7.31.50 PM.jpg",
+                        "img/Cinematographer/Bike Photography/Screenshot 2025-09-01 at 7.36.40 PM.JPG"
                     ]
                 },
                 "car-photography": {
                     "title": "Car Photography",
                     "images": [
-                        "img/Cinematographer/Car Photography/E4479013-00AA-446C-9BAF-953275CE3FC5.jpg",
                         "img/Cinematographer/Car Photography/IMG_9232.JPG"
                     ]
                 },
@@ -450,26 +521,26 @@
                         "img/Cinematographer/Festival Photography/DSC07960.JPG",
                         "img/Cinematographer/Festival Photography/DSC07982.JPG",
                         "img/Cinematographer/Festival Photography/DSC08116.JPG",
-                        "img/Cinematographer/Festival Photography/DSC08162.JPG",
-                        "img/Cinematographer/Festival Photography/DSC08190.JPG",
-                        "img/Cinematographer/Festival Photography/DSC08210.JPG",
-                        "img/Cinematographer/Festival Photography/DSC08228.JPG",
+                        "img/Cinematographer/Festival Photography/DSC08184.JPG",
                         "img/Cinematographer/Festival Photography/DSC08232.JPG",
                         "img/Cinematographer/Festival Photography/DSC08262.JPG",
                         "img/Cinematographer/Festival Photography/DSC08289.JPG",
-                        "img/Cinematographer/Festival Photography/DSC08348.JPG"
                     ]
                 },
                 "models": {
                     "title": "Models",
                     "images": [
-                        "img/Cinematographer/Models/DSC06462.JPG",
+                        "img/Cinematographer/Models/DSC08725.jpg",
                         "img/Cinematographer/Models/DSC08755.JPG",
-                        "img/Cinematographer/Models/DSC08767.jpg",
+                        "img/Cinematographer/Models/DSC08764.jpg",
                         "img/Cinematographer/Models/DSC08794 2.JPG",
-                        "img/Cinematographer/Models/DSC08794.JPG",
-                        "img/Cinematographer/Models/IMG_7715.JPG",
-                        "img/Cinematographer/Models/IMG_7716.JPG"
+                        "img/Cinematographer/Models/DSC08844.JPG",
+                        "img/Cinematographer/Models/IMG_7716.JPG",
+                        "img/Cinematographer/Models/IMG_8440.PNG",
+                        "img/Cinematographer/Models/IMG_8441.PNG",
+                        "img/Cinematographer/Models/IMG_8442.PNG",
+                        "img/Cinematographer/Models/IMG_8443.PNG",
+                        "img/Cinematographer/Models/IMG_8445.PNG"
                     ]
                 },
                 "achivements": {
@@ -489,11 +560,12 @@
 
             const filtersMap = {
                 'blender-3d': 'vfxartist',
-                'maya-3d': 'vfxartist',
+                'vfx-studio': 'vfxartist',
                 'bike-photography': 'cinematographer',
+                'cinematography': 'cinematographer',
                 'car-photography': 'cinematographer',
-                'festival-photography': 'cinematographer editor',
-                'models': 'cinematographer editor',
+                'festival-photography': 'cinematographer',
+                'models': 'cinematographer',
                 'achivements': 'achivements'
             };
 
@@ -502,7 +574,7 @@
                 { src: 'img/portfolio/foodadvfx.png', url: 'https://youtu.be/ECdSHubQGi8?si=CpiKRRDoNOVTuQmn', description:"KHUSRU FOODS AD", filter: ['vfxartist'] },
                 { src: 'img/portfolio/paperboat.png', url: 'https://m.youtube.com/watch?v=5XdWwAL--mQ', description:"PAPERBOAT - AD", filter: ['vfxartist'] },
                 { src: 'img/portfolio/phonepay.png', url: 'https://m.youtube.com/watch?v=kfiAp_Hq1eM', description:"PhonePe - AD", filter: ['vfxartist'] },
-                { src: 'img/portfolio/gopro.png', url: 'https://youtu.be/TmDsi-9pgz8?si=EwDJHVq_ICLJlFHM', description:"GoPGoPro13 - 3D Motion Graphics ADro", filter: 'vfxartist' },
+                { src: 'img/portfolio/gopro.png', url: 'https://youtu.be/TmDsi-9pgz8?si=EwDJHVq_ICLJlFHM', description:"GoPGoPro13 - 3D Motion Graphics ADro", filter:  ['vfxartist'] },
                 { src: 'img/portfolio/gemini.png', url: 'https://youtu.be/UJscUDJCq1s?si=STrGlUlrOn9CnulO', description:"Google Gemini - 2D Motion Graphics AD", filter: ['vfxartist'] }
             ];
 
@@ -522,8 +594,8 @@
 
             // Iterate over projectFolders and add images, ensuring blender/maya are at the end
             let folderIds = Object.keys(projectFolders);
-            folderIds = folderIds.filter(id => id !== 'blender-3d' && id !== 'maya-3d' && id !== 'achivements');
-            folderIds.push('blender-3d', 'maya-3d', 'achivements');
+            folderIds = folderIds.filter(id => id !== 'blender-3d' && id !== 'vfx-studio' && id !== 'achivements');
+            folderIds.push('blender-3d', 'vfx-studio', 'achivements');
 
             folderIds.forEach(folderId => {
                 const folder = projectFolders[folderId];
@@ -600,6 +672,110 @@
             // We bypass MixItUp completely to avoid conflicts with our 3-row flexbox layout!
             $('#portfolioGalleryRow').addClass('mixitup-ready'); // Prevent main.js from initializing MixItUp
 
+            // Filter handling for Hero Video
+            const RESTRICT_VIDEO_TO_VFX_AND_ALL = false; // "for now make play it in all filters"
+            const heroVideo = document.getElementById('hero-video');
+            const heroVideoOverlay = document.getElementById('hero-video-overlay');
+            const muteBtn = document.getElementById('video-mute-btn');
+            const muteIcon = document.getElementById('video-mute-icon');
+            const playBtn = document.getElementById('video-play-btn');
+            const playIcon = document.getElementById('video-play-icon');
+
+            function updateVideoState(filterValue) {
+                const isVfxOrAll = (filterValue === '*' || filterValue === '.vfxartist');
+                const shouldShow = !RESTRICT_VIDEO_TO_VFX_AND_ALL || isVfxOrAll;
+
+                if (shouldShow) {
+                    if (heroVideo) {
+                        heroVideo.style.display = 'block';
+                        // Keep play status consistent
+                        if (heroVideo.paused && playIcon && playIcon.className.includes('fa-pause')) {
+                            heroVideo.play().catch(e => console.log("Play interrupted: ", e));
+                        }
+                    }
+                    if (heroVideoOverlay) heroVideoOverlay.style.opacity = '1';
+                    if (muteBtn) muteBtn.style.display = 'flex';
+                    if (playBtn) playBtn.style.display = 'flex';
+                } else {
+                    if (heroVideo) {
+                        heroVideo.style.display = 'none';
+                        heroVideo.pause();
+                    }
+                    if (heroVideoOverlay) heroVideoOverlay.style.opacity = '0';
+                    if (muteBtn) muteBtn.style.display = 'none';
+                    if (playBtn) playBtn.style.display = 'none';
+                }
+            }
+
+            // Video Mute/Unmute Logic
+            function setMuteState(isMuted) {
+                if (!heroVideo) return;
+                heroVideo.muted = isMuted;
+                if (isMuted) {
+                    if (muteIcon) muteIcon.className = 'fa fa-volume-off';
+                    if (muteBtn) {
+                        muteBtn.style.background = 'rgba(0, 0, 0, 0.6)';
+                        muteBtn.style.borderColor = 'rgba(255, 255, 255, 0.5)';
+                        muteBtn.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.4)';
+                    }
+                } else {
+                    if (muteIcon) muteIcon.className = 'fa fa-volume-up';
+                    if (muteBtn) {
+                        muteBtn.style.background = '#00bfe7';
+                        muteBtn.style.borderColor = '#00bfe7';
+                        muteBtn.style.boxShadow = '0 0 15px rgba(0, 191, 231, 0.6)';
+                    }
+                }
+            }
+
+            // Video Play/Pause Logic
+            function setPlayState(isPlaying) {
+                if (!heroVideo) return;
+                if (isPlaying) {
+                    heroVideo.play().catch(e => console.log("Play interrupted: ", e));
+                    if (playIcon) playIcon.className = 'fa fa-pause';
+                } else {
+                    heroVideo.pause();
+                    if (playIcon) playIcon.className = 'fa fa-play';
+                }
+            }
+
+            if (heroVideo) {
+                // Initialize as unmuted (audio enabled)
+                setMuteState(false);
+
+                // Autoplay logic
+                heroVideo.play().then(() => {
+                    console.log("Autoplay unmuted successful.");
+                    if (playIcon) playIcon.className = 'fa fa-pause';
+                }).catch(error => {
+                    console.log("Unmuted autoplay blocked by browser. Falling back to muted autoplay.", error);
+                    // Fallback to muted autoplay
+                    setMuteState(true);
+                    heroVideo.play().then(() => {
+                        if (playIcon) playIcon.className = 'fa fa-pause';
+                    }).catch(e => {
+                        console.error("Muted autoplay failed: ", e);
+                        if (playIcon) playIcon.className = 'fa fa-play';
+                    });
+                });
+
+                if (muteBtn) {
+                    muteBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        setMuteState(!heroVideo.muted);
+                    });
+                }
+
+                if (playBtn) {
+                    playBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const isPlaying = !heroVideo.paused;
+                        setPlayState(!isPlaying);
+                    });
+                }
+            }
+
             // Manual completely robust filtering logic
             function applyFilter(filterValue, $element) {
                 $('.portfolio__filter li').removeClass('active');
@@ -615,6 +791,9 @@
                     $('.mix').hide();
                     $(filterValue).show();
                 }
+
+                // Update hero video state based on selected filter
+                updateVideoState(filterValue);
             }
 
             $('.portfolio__filter li').on('click', function(e) {
@@ -630,6 +809,8 @@
                 setTimeout(function() {
                     applyFilter('.' + filterToApply, null);
                 }, 100); 
+            } else {
+                updateVideoState('*');
             }
 
             // Initialize image popup for images (only targeting currently visible ones)
