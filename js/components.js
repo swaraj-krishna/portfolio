@@ -75,9 +75,9 @@ $(document).ready(function () {
                 overflow-x: auto;
                 overflow-y: hidden;
                 -webkit-overflow-scrolling: touch; /* smooth momentum scrolling on iOS */
-                gap: 0;
+                gap: 16px;
                 margin: 0;
-                padding: 0;
+                padding: 15px 20px; /* Spacing for shadow card lift */
                 scrollbar-width: none; /* Firefox */
                 -ms-overflow-style: none;  /* IE and Edge */
             }
@@ -88,37 +88,52 @@ $(document).ready(function () {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
-                margin: 0; padding: 0; gap: 0;
+                gap: 20px;
+                padding: 10px 0;
             }
             .creative-img {
                 height: 240px;
                 width: auto;
                 display: block;
-                margin: 0; padding: 0; gap: 0;
                 flex-shrink: 0;
+                transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.6s ease;
             }
             .video-item {
                 position: relative;
                 display: inline-flex;
                 flex-shrink: 0;
                 height: 240px;
-                margin: 0; padding: 0; gap: 0;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5);
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                margin: 0;
+                padding: 0;
+            }
+            .video-item:hover {
+                transform: translateY(-6px);
+                border-color: rgba(0, 191, 231, 0.45);
+                box-shadow: 0 14px 30px rgba(0, 191, 231, 0.25);
+            }
+            .video-item:hover .creative-img {
+                transform: scale(1.08);
+                filter: brightness(0.65) blur(1px);
             }
             .video-overlay {
                 position: absolute;
                 top: 0; left: 0;
                 width: 100%; height: 100%;
-                background: rgba(16, 0, 40, 0);
+                background: linear-gradient(to top, rgba(16, 0, 40, 0.9) 0%, rgba(16, 0, 40, 0.3) 60%, rgba(16, 0, 40, 0) 100%);
                 margin: 0 !important;
                 opacity: 0;
-                transition: all 0.3s ease;
+                transition: all 0.4s ease;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
             }
             .video-item:hover .video-overlay {
-                background: rgba(16, 0, 40, 0.6);
                 opacity: 1;
             }
             .video-item .play-btn {
@@ -130,22 +145,23 @@ $(document).ready(function () {
                 background: #00bfe7;
                 border-color: #00bfe7;
                 color: #ffffff;
-                box-shadow: 0 0 15px rgba(0, 191, 231, 0.5);
+                box-shadow: 0 0 15px rgba(0, 191, 231, 0.6);
             }
             .video-item .portfolio-hover-title {
-                margin-top: 10px;
-                color: rgba(255, 255, 255, 0.85);
+                margin-top: 12px;
+                color: #ffffff;
                 font-family: 'Josefin Sans', sans-serif;
-                font-size: 13px;
+                font-size: 14px;
                 font-weight: 600;
                 text-align: center;
                 text-transform: uppercase;
                 letter-spacing: 2px;
                 opacity: 0;
-                transform: translateY(10px);
-                transition: all 0.3s ease;
-                padding: 0 10px;
+                transform: translateY(15px);
+                transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                padding: 0 15px;
                 line-height: 1.4;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
             }
             .video-item:hover .portfolio-hover-title {
                 opacity: 1;
@@ -155,14 +171,14 @@ $(document).ready(function () {
             /* Mobile and Tablet optimization: Make overlays/buttons always visible */
             @media (max-width: 991px) {
                 .video-overlay {
-                    background: rgba(16, 0, 40, 0.2) !important;
+                    background: linear-gradient(to top, rgba(16, 0, 40, 0.85) 0%, rgba(16, 0, 40, 0.2) 70%) !important;
                     opacity: 1 !important;
                 }
                 .video-item .play-btn {
                     transform: scale(1) !important;
-                    background: rgba(16, 0, 40, 0.6) !important;
+                    background: rgba(16, 0, 40, 0.7) !important;
                     border-color: rgba(255, 255, 255, 0.8) !important;
-                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4) !important;
                 }
                 .video-item .play-btn:active {
                     background: #00bfe7 !important;
@@ -172,6 +188,9 @@ $(document).ready(function () {
                 .video-item .portfolio-hover-title {
                     opacity: 1 !important;
                     transform: translateY(0) !important;
+                }
+                .video-item {
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35) !important;
                 }
             }
         </style>

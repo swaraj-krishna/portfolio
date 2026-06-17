@@ -184,7 +184,7 @@
             /* Mobile and Tablet optimization: Make buttons always visible and clickable */
             @media (max-width: 991px) {
                 #portfolioGalleryRow .mix .portfolio__item__video {
-                    background: rgba(16, 0, 40, 0.2) !important;
+                    background: rgba(16, 0, 40, 0.4) !important; /* Slightly darker overlay for mobile readability */
                     opacity: 1 !important;
                 }
 
@@ -201,6 +201,10 @@
                     transform: scale(0.9) !important;
                 }
 
+                #portfolioGalleryRow .portfolio-hover-title {
+                    opacity: 1 !important;
+                    transform: translateY(0) !important;
+                }
             }
 
             /* Breadcrumb Video Styling */
