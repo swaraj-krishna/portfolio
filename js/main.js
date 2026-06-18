@@ -52,7 +52,23 @@
 	--------------------*/
     $(".mobile-menu").slicknav({
         prependTo: '#mobile-menu-wrap',
-        allowParentLinks: true
+        allowParentLinks: false
+    });
+
+    // Auto-hide burger menu when clicking outside
+    $(document).on('click', function (e) {
+        if ($('.slicknav_btn').hasClass('slicknav_open')) {
+            if (!$(e.target).closest('#mobile-menu-wrap').length) {
+                $(".mobile-menu").slicknav('close');
+            }
+        }
+    });
+
+    // Auto-hide burger menu when scrolling
+    $(window).on('scroll', function () {
+        if ($('.slicknav_btn').hasClass('slicknav_open')) {
+            $(".mobile-menu").slicknav('close');
+        }
     });
 
     /*------------------
